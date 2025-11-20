@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/tests/">
+    <Project Path="Orion.Tests/Orion.Tests.csproj" />
+  </Folder>
+  <Project Path="Orion.Api/Orion.Api.csproj" />
+  <Project Path="Orion.Application/Orion.Application.csproj" />
+  <Project Path="Orion.Domain/Orion.Domain.csproj" />
+  <Project Path="Orion.Infrastructure/Orion.Infrastructure.csproj" />
+</Solution>
