@@ -4,7 +4,7 @@ namespace Orion.Domain.Assets.Ports.Outbound;
 
 public interface IAssetRepository
 {
-    Task Create(Asset asset);
+    Task CreateAsync(Asset asset);
     Task<Asset?> GetByIdAsync(Guid id);
     Task Update(Asset asset);
     Task<Asset?> GetBySerialNumberAsync(string serialNumber);

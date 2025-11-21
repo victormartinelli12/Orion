@@ -17,7 +17,7 @@ public class AssetAllocation : Entity
     
     private AssetAllocation() {}
 
-    public void UpdateDesallocationDate()
+    public void DesalocateAsset()
     {
         DesallocationDate = DateTime.UtcNow;
         UpdatedAt = DateTime.UtcNow;

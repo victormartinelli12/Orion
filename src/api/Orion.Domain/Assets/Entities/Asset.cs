@@ -11,7 +11,7 @@ public class Asset : Entity
     public EAssetType Type { get; init; }
     public DateTime PurchaseDate { get; init; }
     public DateTime WarrentyEndDate { get; init; }
-    public EAssetStatus Status { get; private set; } = EAssetStatus.InStock;
+    public EAssetStatus Status { get; private set; }
     public DateTime? UpdatedAt { get; private set; }
     
     private Asset() {}
@@ -41,7 +41,7 @@ public class Asset : Entity
     }
 
     public static Result<Asset> Create(string model, string serialNumber,
-        EAssetType type, DateTime purchaseDate, DateTime warrentyEndDate)
+        EAssetType type, DateTime purchaseDate, DateTime warrentyEndDate, EAssetStatus status = EAssetStatus.InStock)
     {
         if (warrentyEndDate.Date < purchaseDate.Date)
             return Result<Asset>.Failure(
@@ -58,6 +58,7 @@ public class Asset : Entity
             Type =  type,
             PurchaseDate = purchaseDate,
             WarrentyEndDate = warrentyEndDate,
+            Status =  status,
             CreatedAt =  DateTime.UtcNow
         };
     }

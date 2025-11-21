@@ -15,6 +15,11 @@ public class SoftwareLicense : Entity
     
     private SoftwareLicense() {}
 
+    public void AddAllocation(SoftwareAllocation allocation)
+    {
+        Allocations.Add(allocation);
+    }
+
     public static Result<SoftwareLicense> Create(string name, string licenseKey,
         DateTime purchaseDate, DateTime expirationDate, int seats)
     {

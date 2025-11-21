@@ -12,9 +12,6 @@ public class Employee : Entity
     public ERole Role { get; private set; }
     public string PhoneNumber { get; private set; } = null!;
     public DateTime? UpdatedAt { get; private set; }
-
-    public Guid PersonId { get; private set; }
-    public virtual Person Person { get; set; }
     
     private Employee() {}
 
@@ -30,7 +27,7 @@ public class Employee : Entity
         UpdatedAt = DateTime.UtcNow;
     }
 
-    public static Result<Employee> Create(string email, string password, ERole role, string phoneNumber, Guid personId)
+    public static Result<Employee> Create(string email, string password, ERole role, string phoneNumber)
     {
         if (string.IsNullOrEmpty(phoneNumber))
             return Result<Employee>.Failure(new Error("Empty.PhoneNumber", "Phone number can not be null"));
@@ -47,8 +44,7 @@ public class Employee : Entity
             Email = Email.Create(email).Value!,
             Password = password,
             Role = role,
-            PhoneNumber = phoneNumber,
-            PersonId = personId
+            PhoneNumber = phoneNumber
         };
     }
 }

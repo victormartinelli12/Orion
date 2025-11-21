@@ -7,14 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Ports\Inbound\" />
-    <Folder Include="Employees\Ports\Inbound\" />
-    <Folder Include="Employees\Ports\Outbound\" />
     <Folder Include="Persons\Ports\Inbound\" />
     <Folder Include="Persons\Ports\Outbound\" />
-    <Folder Include="SoftwareLicenses\DomainServices\" />
-    <Folder Include="SoftwareLicenses\Ports\Inbound\" />
-    <Folder Include="SoftwareLicenses\Ports\Outbound\" />
   </ItemGroup>
 
 </Project>

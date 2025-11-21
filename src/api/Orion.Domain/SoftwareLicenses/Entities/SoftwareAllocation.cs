@@ -17,9 +17,9 @@ public class SoftwareAllocation : Entity
     
     private SoftwareAllocation() { }
 
-    public void UpdateDesallocationDate()
+    public void DesallocateSoftware()
     {
-        DesallocationDate = DateTime.UtcNow;
+        DesallocationDate = DateTime.UtcNow.Date;
         UpdatedAt = DateTime.UtcNow;
     }
 
