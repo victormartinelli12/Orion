@@ -1,4 +1,6 @@
-namespace Orion.Domain.Abstraction;
+using Orion.Domain.Abstraction.Entities;
+
+namespace Orion.Domain.Abstraction.Responses;
 
 public class PagedResult<T> where T : Entity
 {

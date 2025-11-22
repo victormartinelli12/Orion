@@ -11,5 +11,5 @@ public interface ISoftwareAllocationRepository
     Task<IEnumerable<SoftwareAllocation>> GetAllAsync(int skip, int take);
     Task<IEnumerable<SoftwareAllocation>> GetByEmployeeIdAsync(Guid employeeId);
     Task<Employee?> GetEmployeeByIdAsync(Guid employeeId);
-    Task<SoftwareAllocation?> GetEmployeesByLicenseKeyAsync(string licenseKey);
+    Task<IEnumerable<Employee>> GetEmployeesByLicenseKeyAsync(string licenseKey);
 }

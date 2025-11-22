@@ -1,4 +1,6 @@
 using Orion.Domain.Abstraction;
+using Orion.Domain.Abstraction.Entities;
+using Orion.Domain.Abstraction.Responses;
 using Orion.Domain.Employees.Enums;
 using Orion.Domain.Employees.ValueObjects;
 using Orion.Domain.Persons.Entities;

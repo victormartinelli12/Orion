@@ -1,4 +1,6 @@
 using Orion.Domain.Abstraction;
+using Orion.Domain.Abstraction.Entities;
+using Orion.Domain.Abstraction.Responses;
 
 namespace Orion.Domain.Persons.ValueObjects;
 

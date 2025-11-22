@@ -10,5 +10,5 @@ public interface ISoftwareLicenseRepository
     Task<SoftwareLicense?> GetByIdAsync(Guid id);
     Task<SoftwareLicense?> GetByLicenseKeyAsync(string licenseKey);
     Task<IEnumerable<SoftwareLicense>> GetAllAsync(int skip, int take);
-    Task<IEnumerable<SoftwareLicense>> GetAlmostExipireds();
+    Task<IQueryable<SoftwareLicense>> GetAlmostExipireds();
 }

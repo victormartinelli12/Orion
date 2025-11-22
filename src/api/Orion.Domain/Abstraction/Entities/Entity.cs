@@ -1,4 +1,4 @@
-namespace Orion.Domain.Abstraction;
+namespace Orion.Domain.Abstraction.Entities;
 
 public abstract class Entity
 {

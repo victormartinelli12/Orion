@@ -1,4 +1,6 @@
 using Orion.Domain.Abstraction;
+using Orion.Domain.Abstraction.Entities;
+using Orion.Domain.Abstraction.Responses;
 using Orion.Domain.Employees.Entities;
 
 namespace Orion.Domain.SoftwareLicenses.Entities;
@@ -11,7 +13,7 @@ public class SoftwareAllocation : Entity
     public Guid EmployeeId { get; init; }
     public virtual Employee Employee { get; init; }
 
-    public DateTime AllocationDate { get; init; } = DateTime.UtcNow.Date;
+    public DateTime AllocationDate { get; init; } = DateTime.UtcNow;
     public DateTime? DesallocationDate { get; private set; }
     public DateTime? UpdatedAt { get; private set; }
     
@@ -19,7 +21,7 @@ public class SoftwareAllocation : Entity
 
     public void DesallocateSoftware()
     {
-        DesallocationDate = DateTime.UtcNow.Date;
+        DesallocationDate = DateTime.UtcNow;
         UpdatedAt = DateTime.UtcNow;
     }
 
